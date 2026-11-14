@@ -75,8 +75,11 @@ print("url ->", sys.argv[1])
 PY
 
 echo "▸ Release GitHub…"
+NOTES_FILE=$(mktemp)
+trap 'rm -f "$NOTES_FILE"' EXIT
+awk -v v="## $VERSION" '$0==v{f=1;next} /^## /{f=0} f' CHANGELOG.md > "$NOTES_FILE"
 gh release create "$TAG" --repo "$SLUG" --title "NXN Studio $VERSION" \
-  --notes-file <(awk -v v="## $VERSION" '$0==v{f=1;next} /^## /{f=0} f' CHANGELOG.md) \
+  --notes-file "$NOTES_FILE" \
   "dist/$SAFE" "dist/latest.json"
 
 echo ""
