@@ -2,6 +2,10 @@
 
 [English](CHANGELOG.md) · **Français**
 
+## 1.6.0
+
+- Flux de mise à jour et liens du dépôt déplacés vers le nouveau nom de compte. Les installations 1.5.0 continuent de se mettre à jour via l'ancienne adresse jusqu'à la sortie de cette version.
+
 ## 1.5.0
 
 Passe de sécurité et de robustesse :

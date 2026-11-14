@@ -2,6 +2,10 @@
 
 **English** · [Français](CHANGELOG.fr.md)
 
+## 1.6.0
+
+- Update feed and repository links moved to the new account name. Installs of 1.5.0 keep updating through the previous address until this release is out.
+
 ## 1.5.0
 
 Security and hardening pass:
